@@ -19,13 +19,23 @@
     }
     section {
       padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 30px;
+      margin-top: 40px;
     }
-    section h2 {
-      color: #333;
-      font-size: 24px;
+    .content-card {
+      background-color: #fff;
+      border: 2px solid #6ECB63;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+    .content-card img {
+      max-width: 100%;
       margin-bottom: 20px;
     }
-    section p {
+    .content-card p {
       color: #666;
       font-size: 16px;
     }
@@ -36,6 +46,20 @@
       color: #666;
       font-size: 14px;
     }
+    .vignette-effect {
+      position: relative;
+      overflow: hidden;
+    }
+    .vignette-effect::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
@@ -43,12 +67,16 @@
     <h1>Welcome to ONE|Boulder</h1>
   </header>
   <section>
-    <h2>Do you ever feel like there's so much more you could do to make a positive impact in your community?</h2>
-    <p>ONE|Boulder is here to help. It's a locally focused social coordination platform designed to bring individuals and organizations together to share skills, resources, and support. With ONE|Boulder, you can easily manage projects and events, connect with like-minded groups, and even earn badges for your contributions. It's a place where you can make a real difference in your community, while also finding fulfillment and connection.</p>
-  </section>
-  <section>
-    <h2>Are you ready to break free from isolation and create a better world?</h2>
-    <p>ONE|Boulder is your answer. It's not just about transactional exchanges of skills and resources - it's about building deep connections, finding shared purpose, and creating a thriving ecosystem of support. Whether you're looking to share your unique skills, collaborate on projects, or connect with others who share your passions, ONE|Boulder offers a space where you can thrive and make a positive impact. Join us today and become part of a community that is committed to creating a future where everyone thrives.</p>
+    <div class="content-card vignette-effect">
+      <img src="sample-image1.jpg" alt="Sample Image">
+      <h2>Do you ever feel like there's so much more you could do to make a positive impact in your community?</h2>
+      <p>ONE|Boulder is here to help. It's a locally focused social coordination platform designed to bring individuals and organizations together to share skills, resources, and support. With ONE|Boulder, you can easily manage projects and events, connect with like-minded groups, and even earn badges for your contributions. It's a place where you can make a real difference in your community, while also finding fulfillment and connection.</p>
+    </div>
+    <div class="content-card vignette-effect">
+      <img src="sample-image2.jpg" alt="Sample Image">
+      <h2>Are you ready to break free from isolation and create a better world?</h2>
+      <p>ONE|Boulder is your answer. It's not just about transactional exchanges of skills and resources - it's about building deep connections, finding shared purpose, and creating a thriving ecosystem of support. Whether you're looking to share your unique skills, collaborate on projects, or connect with others who share your passions, ONE|Boulder offers a space where you can thrive and make a positive impact. Join us today and become part of a community that is committed to creating a future where everyone thrives.</p>
+    </div>
   </section>
   <footer>
     <p>&copy; 2022 ONE|Boulder. All rights reserved.</p>
